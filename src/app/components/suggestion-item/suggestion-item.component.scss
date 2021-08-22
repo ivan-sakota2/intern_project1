@@ -1,0 +1,56 @@
+.video_btn {
+  background-color: #0f1111;
+  height: 140px;
+  width: 365px;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  width: 45%;
+  color: white;
+  float: right;
+  font-weight: bold;
+  text-align: start;
+  padding-bottom: 20px;
+}
+
+.image_box {
+  width: 50%;
+  float: left;
+}
+
+.duration {
+  color: white;
+  background-color: black;
+  position: absolute;
+  transform: translatex(146px) translatey(110px);
+}
+
+.text2 {
+  color: gray;
+  text-align: inherit;
+  padding-top: 35px;
+}
+
+.text3 {
+  color: gray;
+  padding-top: 5px;
+  text-align: inherit;
+}
+
+.image {
+  width: 175px;
+  height: 125px;
+}
+
+.text-box {
+  float: right;
+}
+
+.align {
+  float: right;
+  clear: both;
+}
