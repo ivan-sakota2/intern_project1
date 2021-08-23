@@ -1,11 +1,21 @@
+.align{
+
+  transform: translatex(0px) translatey(100px);
+  position:relative;
+
+}
+
+
+
 .video_btn {
-  background-color: #0f1111;
+  background-color:#131921 ;
   height: 140px;
   width: 365px;
   border: none;
   outline: none;
   margin: 0;
   padding: 0;
+
 }
 
 .text {
@@ -17,6 +27,9 @@
   padding-bottom: 20px;
 }
 
+
+
+
 .image_box {
   width: 50%;
   float: left;
@@ -24,15 +37,15 @@
 
 .duration {
   color: white;
-  background-color: black;
-  position: absolute;
-  transform: translatex(146px) translatey(110px);
+  background-color:#181818;
+  position:absolute;
+  transform: translatex(135px) translatey(85px);
 }
 
 .text2 {
   color: gray;
   text-align: inherit;
-  padding-top: 35px;
+  padding-top: 25px;
 }
 
 .text3 {
@@ -42,8 +55,8 @@
 }
 
 .image {
-  width: 175px;
-  height: 125px;
+  width: 150px;
+  height: 100px;
 }
 
 .text-box {
