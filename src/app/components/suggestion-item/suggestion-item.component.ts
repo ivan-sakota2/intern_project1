@@ -1,5 +1,6 @@
 import { InvokeFunctionExpr } from '@angular/compiler';
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-suggestion-item',
@@ -13,7 +14,7 @@ export class SuggestionItemComponent implements OnInit {
   @Input() text3: string;
   @Input() duration:string;
   
-  constructor() {
+  constructor(private dataService:DataService) {
     this.text = '';
     this.src = '';
     this.text2 = '';
@@ -22,4 +23,10 @@ export class SuggestionItemComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+  
+  sendData(){
+    this.dataService.sendData(this.src);
+  }
+
+
 }

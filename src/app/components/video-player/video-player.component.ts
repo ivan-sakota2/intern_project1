@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-video-player',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video-player.component.scss']
 })
 export class VideoPlayerComponent implements OnInit {
+  
+  src: string;
 
-  constructor() { }
+  constructor(private dataService:DataService) {
+    this.src = "https://www.youtube.com/embed/MrxkwLVYkYQ";
+  }
 
   ngOnInit(): void {
+    this.dataService.receivedData().subscribe((d)=>{
+        this.src = d;
+    })
   }
 
 }

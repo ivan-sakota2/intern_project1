@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SuggestionItemComponent } from './components/suggestion-item/suggestion-item.component';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
+import { SafePipe } from './safe.pipe';
 
 
 
@@ -16,6 +17,7 @@ import { VideoPlayerComponent } from './components/video-player/video-player.com
     HeaderComponent,
     SuggestionItemComponent,
     VideoPlayerComponent,
+    SafePipe,
 
 
     
