@@ -21,6 +21,8 @@ position: fixed;
     color: white;
     align-items: center;
     border-radius: 8px 0px 0px 8px;
+    border: none; 
+    margin: 0;
 }
 
 .search_box input{
@@ -29,6 +31,8 @@ position: fixed;
     background-color: white;
     border: none;
     border-radius: 8px 0px 0px 8px;
+    margin: 0;
+   outline: none;
 }
 .logo{
     width: 50px;
@@ -39,21 +43,27 @@ position: fixed;
 }
 
 
-.b{
-    background-color:#F3A847 ;
-    height: 50%;
-    width:50px;
-    border-radius: 0px 8px 8px 0px; 
-    position: relative;
-}
+
 
 
 .fa-search{
-    font-size: 22px;
+    font-size: 25px;
     position: absolute;
     height: 10px;
     top: 35%;
-    left: 25%;
     right: 0;
+    transform: translateX(50%);
     transform: translateY(-50%);
+    
+}
+
+.search-button{
+margin: 0;
+padding: 0;
+height: 50%;
+width: 50px;
+position: relative;
+background-color:#F3A847 ;
+border-radius: 0px 8px 8px 0px;
+border: none;   
 }
