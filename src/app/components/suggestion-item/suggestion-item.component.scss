@@ -1,11 +1,10 @@
-.align{
 
+.align{
   transform: translatex(0px) translatey(100px);
   position:relative;
-
+  float: right;
+  clear: both;
 }
-
-
 
 .video_btn {
   background-color:#131921 ;
@@ -15,6 +14,7 @@
   outline: none;
   margin: 0;
   padding: 0;
+  
 
 }
 
@@ -35,12 +35,7 @@
   float: left;
 }
 
-.duration {
-  color: white;
-  background-color:#181818;
-  position:absolute;
-  transform: translatex(135px) translatey(85px);
-}
+
 
 .text2 {
   color: gray;
@@ -56,14 +51,10 @@
 
 .image {
   width: 150px;
-  height: 100px;
+  height: 100%;
 }
 
 .text-box {
   float: right;
 }
 
-.align {
-  float: right;
-  clear: both;
-}

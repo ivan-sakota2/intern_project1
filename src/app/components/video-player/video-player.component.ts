@@ -21,11 +21,12 @@ export class VideoPlayerComponent implements OnInit {
     .subscribe(
     (urlData)=>{
     this.src=urlData;
-
+console.log(this.src);
     }
     )
     this.dataService.receivedData().subscribe((d)=>{
         this.src = d;
+        console.log(this.src);
     })
   }
 

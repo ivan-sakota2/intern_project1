@@ -12,20 +12,17 @@ import { YoutubeService } from 'src/app/services/youtube.service';
 })
 export class SuggestionItemComponent implements OnInit {
   @Input() text: string;
-  @Input() src: string;
   @Input() text2: string;
   @Input() text3: string;
-  @Input() duration:string;
-  @Input() videoUrl:string;
-
+  @Input() videoThumbnail:string;
+  @Input() src: string;
   
   constructor(private dataService:DataService,private youTubeService:YoutubeService,private _behaviorsubject:BehaviorsubjectService) {
     this.text = '';
-    this.src = '';
     this.text2 = '';
     this.text3 = '';
-    this.duration = '';
-    this.videoUrl='';
+    this.videoThumbnail='';
+    this.src = '';
   }
 
   
@@ -37,7 +34,7 @@ export class SuggestionItemComponent implements OnInit {
   }
   
 sendData(){
-    this.dataService.sendData(this.src);
+    this.dataService.sendData(this.videoThumbnail);
     this._behaviorsubject.sendUrl(this.src);
   }
 

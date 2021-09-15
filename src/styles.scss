@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    margin: 0;
-    padding: 0;
+    background-color: #131921;
+}
+
+.items-container{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
 }

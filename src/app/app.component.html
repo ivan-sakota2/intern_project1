@@ -1,13 +1,22 @@
-<app-header style="position: fixed; width: 100%;"></app-header>
 
 
-<app-suggestion-item 
-  text=""
-  text2="Rio Ry"
-  duration="20:53"
-  videoUrl=""
+<app-header style="width: 100%;"></app-header>
+
+
+
+<body> 
+
+<div *ngIf="shouldShowItems" class="items-container" >
+  <app-suggestion-item 
+  *ngFor="let item of items"
+  text="{{item?.snippet?.title}}"
+  text2="{{item?.snippet?.description | slice:0:35}}..." 
+  src="https://www.youtube.com/embed/{{item.id.videoId}}"
+  videoThumbnail="{{item?.snippet?.thumbnails.high.url}}"
 ></app-suggestion-item>
-
-
-
+</div>
+<div class="video-container" >
 <app-video-player></app-video-player>
+</div>
+
+</body>

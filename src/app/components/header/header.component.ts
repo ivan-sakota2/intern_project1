@@ -19,9 +19,9 @@ export class HeaderComponent implements OnInit {
      
   ngOnInit(): void {}
 
-  onLupaClick(){
-   var apiResponse = this.api.search(this.text);
-   this.behaviourSubjectServis.sendVideoItems(apiResponse);
+  async onLupaClick(){
+   var apiResponse : any = await this.api.search(this.text);
+   this.behaviourSubjectServis.sendVideoItems(apiResponse.items);
   }
 onSubmit(){
 
