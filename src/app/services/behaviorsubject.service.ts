@@ -2,25 +2,20 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BehaviorsubjectService {
-  
-  private videoUrl = new Subject<string>();
-  url$ = this.videoUrl.asObservable();
+  private currentVideo = new Subject<any>();
+  currentVideo$ = this.currentVideo.asObservable();
+
   private videoItems = new Subject<any>();
   items = this.videoItems.asObservable();
-  constructor() { }
-sendUrl(url: string){
+  constructor() {}
+  sendUrl(newItem: any) {
+    this.currentVideo.next(newItem);
+  }
 
-this.videoUrl.next(url);
-
-}
-
-sendVideoItems(videos: any){
-
-  this.videoItems.next(videos);
-}
-
-  
+  sendVideoItems(videos: any) {
+    this.videoItems.next(videos);
+  }
 }

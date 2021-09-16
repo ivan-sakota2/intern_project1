@@ -7,7 +7,8 @@ import { SuggestionItemComponent } from './components/suggestion-item/suggestion
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { SafePipe } from './safe.pipe';
 import { HttpClientModule } from '@angular/common/http';
-import{FormsModule} from '@angular/forms'
+import{FormsModule} from '@angular/forms';
+import { VideoDetailsComponent } from './components/video-details/video-details.component'
 
 
 
@@ -17,7 +18,8 @@ import{FormsModule} from '@angular/forms'
     HeaderComponent,
     SuggestionItemComponent,
     VideoPlayerComponent,
-    SafePipe
+    SafePipe,
+    VideoDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { InvokeFunctionExpr } from '@angular/compiler';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { BehaviorsubjectService } from 'src/app/services/behaviorsubject.service';
@@ -14,29 +15,33 @@ export class SuggestionItemComponent implements OnInit {
   @Input() text: string;
   @Input() text2: string;
   @Input() text3: string;
-  @Input() videoThumbnail:string;
+  @Input() videoThumbnail: string;
   @Input() src: string;
-  
-  constructor(private dataService:DataService,private youTubeService:YoutubeService,private _behaviorsubject:BehaviorsubjectService) {
+  @Input() videoId: string;
+
+  constructor(
+    private dataService: DataService,
+    private youTubeService: YoutubeService,
+    private _behaviorsubject: BehaviorsubjectService
+  ) {
     this.text = '';
     this.text2 = '';
     this.text3 = '';
-    this.videoThumbnail='';
+    this.videoThumbnail = '';
     this.src = '';
+    this.videoId = '';
   }
 
-  
-  ngOnInit() {
+  ngOnInit() {}
 
-    
-  
-
-  }
-  
-sendData(){
+  sendData() {
     this.dataService.sendData(this.videoThumbnail);
-    this._behaviorsubject.sendUrl(this.src);
+
+    let videoForPlay = {
+      videoUrl: this.src,
+      videoId: this.videoId,
+    };
+
+    this._behaviorsubject.sendUrl(videoForPlay);
   }
-
-
 }

@@ -2,7 +2,7 @@
 float:left;
 background-color:#131921;
 margin: 0;
-padding: 0;
+padding:0;
 width:1002px;
 height: 100%;
 }
@@ -13,5 +13,12 @@ width: 960px;
 padding-left: 20px;
 height: 410px;
 
-
 }
+
+
+    @media screen and (min-width: 1400px) {
+    
+        .container {
+            width: 1200px;
+        }
+    }

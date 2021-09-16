@@ -10,7 +10,8 @@
   <app-suggestion-item 
   *ngFor="let item of items"
   text="{{item?.snippet?.title}}"
-  text2="{{item?.snippet?.description | slice:0:35}}..." 
+  text2="{{item?.snippet?.description | slice:0:35}}..."
+  videoId="{{item.id.videoId}}"
   src="https://www.youtube.com/embed/{{item.id.videoId}}"
   videoThumbnail="{{item?.snippet?.thumbnails.high.url}}"
 ></app-suggestion-item>
@@ -18,5 +19,7 @@
 <div class="video-container" >
 <app-video-player></app-video-player>
 </div>
+
+<app-video-details></app-video-details>
 
 </body>
