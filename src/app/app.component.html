@@ -5,7 +5,11 @@
 
 
 <body> 
-<input disabled type="text" placeholder="Enter a term in search-box!" class="placeholder">
+ 
+
+<input disabled type="text" placeholder="Enter a term in search-box!" class="placeholder" *ngIf="shouldShow" >
+
+
 <div *ngIf="shouldShowItems" class="items-container" >
   <app-suggestion-item 
   *ngFor="let item of items"

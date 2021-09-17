@@ -9,17 +9,16 @@ export class ApiService {
   baseUrl='https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=';
   private apiKey = environment.apiKey;
   constructor(private http: HttpClient) { }
-
-  search(text: string) {
-    let url = `${this.baseUrl}${text}&key=${this.apiKey}`;
-
-    return this.http.get(url).toPromise();
-  }
   private currentVideo = new Subject<any>();
   currentVideo$ = this.currentVideo.asObservable();
 
   private videoItems = new Subject<any>();
   items = this.videoItems.asObservable();
+  search(text: string) {
+    let url = `${this.baseUrl}${text}&key=${this.apiKey}`;
+
+    return this.http.get(url).toPromise();
+  }
   
   sendUrl(newItem: any) {
     this.currentVideo.next(newItem);

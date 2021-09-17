@@ -9,14 +9,11 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./video-player.component.scss'],
 })
 export class VideoPlayerComponent implements OnInit {
-  src: string;
-
+  src ='https://www.youtube.com/embed/MrxkwLVYkYQ';
   constructor(
     private dataService: DataService,
     private _apiService: ApiService
-  ) {
-    this.src = 'https://www.youtube.com/embed/MrxkwLVYkYQ';
-  }
+  ) {}
 
   ngOnInit(): void {
     this._apiService.currentVideo$.subscribe((urlData) => {

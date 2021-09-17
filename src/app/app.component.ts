@@ -8,6 +8,7 @@ import { ApiService } from './services/api.service';
 })
 export class AppComponent implements OnInit {
   shouldShowItems = false;
+  shouldShow=true;
   items: any = [];
 
   constructor(
@@ -25,7 +26,12 @@ export class AppComponent implements OnInit {
 
         
       }
-       this.shouldShowItems = true;
+      if(this.items.length>0){
+       this.shouldShowItems =true;
+       this.shouldShow=false;
+      }else{
+       this.shouldShow=true;
+      }
     });
   }
 }
