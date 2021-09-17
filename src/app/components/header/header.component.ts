@@ -1,9 +1,7 @@
-import { OnInit, Output, EventEmitter } from '@angular/core';
-import { Component, ViewChild, ElementRef } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { FormGroup, FormControl, Validators } from '@angular/forms'
-import { BehaviorsubjectService } from 'src/app/services/behaviorsubject.service';
-import { YoutubeService } from 'src/app/services/youtube.service';
+import { OnInit,  } from '@angular/core';
+import { Component,  } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
+
 
 
 @Component({
@@ -15,13 +13,13 @@ export class HeaderComponent implements OnInit {
   
   text!: string;
 
-  public constructor(protected api:YoutubeService,protected behaviourSubjectServis:BehaviorsubjectService) {}
+  public constructor(protected api:ApiService,protected _apiService:ApiService) {}
      
   ngOnInit(): void {}
 
   async onLupaClick(){
    var apiResponse : any = await this.api.search(this.text);
-   this.behaviourSubjectServis.sendVideoItems(apiResponse.items);
+   this._apiService.sendVideoItems(apiResponse.items);
   }
 onSubmit(){
 
@@ -31,7 +29,7 @@ if(!this.text){
   return;
 
 }
-console.log(this.text);
+
 const newText = {
 text: this.text
 

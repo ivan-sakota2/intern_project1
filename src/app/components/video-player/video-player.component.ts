@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorsubjectService } from 'src/app/services/behaviorsubject.service';
+import { ApiService } from 'src/app/services/api.service';
 import { DataService } from 'src/app/services/data.service';
-import { YoutubeService } from 'src/app/services/youtube.service';
+
 
 @Component({
   selector: 'app-video-player',
@@ -13,19 +13,19 @@ export class VideoPlayerComponent implements OnInit {
 
   constructor(
     private dataService: DataService,
-    private _behavioursubject: BehaviorsubjectService
+    private _apiService: ApiService
   ) {
     this.src = 'https://www.youtube.com/embed/MrxkwLVYkYQ';
   }
 
   ngOnInit(): void {
-    this._behavioursubject.currentVideo$.subscribe((urlData) => {
+    this._apiService.currentVideo$.subscribe((urlData) => {
       this.src = urlData.videoUrl;
-      console.log(this.src);
+      
     });
     this.dataService.receivedData().subscribe((d) => {
       this.src = d;
-      console.log(this.src);
+     
     });
   }
 }

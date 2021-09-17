@@ -1,0 +1,17 @@
+.placeholder{
+background-color: #F3A847;
+float:right;
+text-align: center;
+outline: none;
+margin: 0;
+padding:0;
+width: 200px;
+height: 200px;
+transform: translatex(-50px) translatey(100px);
+border: none;
+
+}
+::placeholder{
+    color:black;
+    font-weight: bold;
+}

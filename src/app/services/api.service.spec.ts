@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { YoutubeService } from './youtube.service';
+import { ApiService } from './api.service';
 
-describe('YoutubeService', () => {
-  let service: YoutubeService;
+describe('ApiService', () => {
+  let service: ApiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(YoutubeService);
+    service = TestBed.inject(ApiService);
   });
 
   it('should be created', () => {
